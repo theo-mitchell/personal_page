@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import utilStyles from '../styles/utils.module.scss';
 import Script from "next/script";
 import MainPageLayout from "../components/mainpage-layout";
 
@@ -28,6 +29,8 @@ const Home = () => {
           }
         /> */}
       </main>
+      <h1 className={utilStyles.heading2Xl}>Test CSS</h1>
+      <h1>Test CSS</h1>
 
       {/* <footer className={styles.footer}>
       </footer> */}
