@@ -22,6 +22,7 @@ export function getSortedPostsData(): PostData[] {
     return {
       id,
       data: matterResult.data,
+      content: matterResult.content
     };
   });
 
@@ -34,7 +35,7 @@ export function getSortedPostsData(): PostData[] {
       return 0;
     }
   });
-
+  
   // Sort posts by date
   return sortedPosts;
 }
@@ -42,4 +43,6 @@ export function getSortedPostsData(): PostData[] {
 export interface PostData {
     id: string,
     data: { [key: string]: any },
+    content: string,
+    excerpt?: string,
 }

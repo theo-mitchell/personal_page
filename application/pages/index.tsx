@@ -8,7 +8,7 @@ import Blog from "./blog/index";
 import { getSortedPostsData, PostData } from "../lib/posts";
 import Link from "next/link";
 
-const Home = (allPostData) => {
+const Home = () => {
   return (
     <MainPageLayout>
       <Head>
@@ -44,15 +44,5 @@ const Home = (allPostData) => {
   );
 };
 export default Home;
-
-export const getStaticProps = async () => {
-  const allPostData: PostData[] = getSortedPostsData();
-  console.table(allPostData);
-  return {
-    props: {
-      allPostData,
-    }
-  }
-}
 
 
