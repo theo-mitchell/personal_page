@@ -1,7 +1,8 @@
-import { getSortedPostsData, PostData } from "../../lib/posts";
+import Link from "next/link";
+import { getSortedPostsLinks, PostLink } from "../../lib/posts";
 
-const Blog = ({ allPostData }) => {
-  const posts: PostData[] = allPostData;
+const Blog = ({ allPostLinks }) => {
+  const posts: PostLink[] = allPostLinks;
 
   if (posts) {
     return (
@@ -10,8 +11,7 @@ const Blog = ({ allPostData }) => {
         {posts.map((post) => {
           return (
             <>
-              <h1 key={post.id}>{post.data.title}</h1>
-              <p key={post.id}>{post.content}</p>
+            <h2><Link key={post.id} href={`/blog/${post.id}`}>{post.data?.title}</Link></h2>
             </>
           );
         })}
@@ -23,11 +23,10 @@ const Blog = ({ allPostData }) => {
 export default Blog;
 
 export const getStaticProps = async () => {
-  const allPostData: PostData[] = getSortedPostsData();
-  console.log(allPostData);
+  const allPostLinks: PostLink[] = getSortedPostsLinks();
   return {
     props: {
-      allPostData,
+      allPostLinks,
     },
   };
 };
