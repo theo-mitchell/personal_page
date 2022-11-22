@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.scss";
-import utilStyles from '../styles/utils.module.scss';
+import utilStyles from '../styles/utils.module.css';
 import Script from "next/script";
 import MainPageLayout from "../components/mainpage-layout";
 import Blog from "./blog/index";
@@ -18,7 +17,7 @@ const Home = () => {
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png"/>
         <link rel="manifest" href="/images/favicon_io/site.webmanifest"/>
       </Head>
-      <main className={styles.main}>
+      <main>
         <Image
           src="/images/ogre.png" // Route of the image file
           height={144} // Desired size with correct aspect ratio
@@ -34,7 +33,7 @@ const Home = () => {
           }
         /> */}
       </main>
-      <h1 className={utilStyles.heading2Xl}>Test CSS</h1>
+      <h1 className="text-3xl font-bold underline">Test CSS</h1>
       <h1>Test CSS</h1>
 
       {/* <footer className={styles.footer}>

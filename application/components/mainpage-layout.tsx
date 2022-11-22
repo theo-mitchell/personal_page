@@ -1,7 +1,7 @@
-import styles from '../styles/mainpage-layout.module.scss';
+import styles from '../styles/mainpage-layout.module.css';
 
 const MainPageLayout = ({children}: any) => {
-    return <div className={styles.container}>{children}</div>;
+    return <div>{children}</div>;
 }
 
 export default MainPageLayout;
