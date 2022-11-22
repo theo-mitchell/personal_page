@@ -5,7 +5,6 @@ import utilStyles from '../styles/utils.module.scss';
 import Script from "next/script";
 import MainPageLayout from "../components/mainpage-layout";
 import Blog from "./blog/index";
-import { getSortedPostsData, PostData } from "../lib/posts";
 import Link from "next/link";
 
 const Home = () => {

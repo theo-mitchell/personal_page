@@ -19,11 +19,14 @@ export const getSortedPostsLinks = (): PostLink[] => {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+    console.log('MATTER RESULT');
+    console.log(matterResult);
 
     // Combine the data with the id
     return {
       id,
-      data: {...matterResult.data},
+      date: matterResult.data.date,
+      title: matterResult.data.title
     };
   });
 
@@ -90,5 +93,7 @@ export const getPostData = async (id: string) => {
 
 export interface PostLink {
   id: string;
-  data: { [key: string]: any }
+  title: string;
+  date?: string;
+  // data: { [key: string]: any }
 }

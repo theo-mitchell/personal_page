@@ -1,7 +1,7 @@
 import { getPostData, getAllPostIds } from "../../lib/posts";
 import Date from '../../components/date';
 
-const Post = ({ postData }) => {
+const Post = ({ postData }: any) => {
   console.table(postData);
   console.log("herro");
   return (
@@ -22,7 +22,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params }: any) => {
   const postData = await getPostData(params.id);
   return {
     props: {
