@@ -1,6 +1,6 @@
 import { parseISO, format } from "date-fns";
 
-const Date = (props) => {
+const Date = (props: any) => {
   const date = parseISO(props.dateString);
   return (
     <>
