@@ -5,10 +5,10 @@ import {
     MenuButton,
     MenuList,
   } from "@chakra-ui/react";
-const MenuButton = () => {
+const NavButton = () => {
   return (
     <>
-      <Box>
+      <Box p={5}>
         <Menu>
           <MenuButton>menu</MenuButton>
           <MenuList>
@@ -25,4 +25,4 @@ const MenuButton = () => {
   );
 };
 
-export default MenuButton;
+export default NavButton;
